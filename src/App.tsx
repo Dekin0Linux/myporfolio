@@ -489,7 +489,7 @@ function App() {
                 <Mail className="w-6 h-6" />
               </a>
               <a
-                href="https://wa.me/0261965074"
+                href="https://wa.me/+233261965074"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-sky-400 transition-colors duration-200"
@@ -498,7 +498,7 @@ function App() {
               </a>
             </div>
             <p className="text-gray-500 text-sm">
-              © 2022 Faisal. All rights reserved. Built with React & Tailwind
+              © 2022 Faisal Dev. All rights reserved. 
               CSS.
             </p>
           </div>
