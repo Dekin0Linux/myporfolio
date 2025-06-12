@@ -13,6 +13,14 @@ import {
   Globe,
 } from "lucide-react";
 import { Typewriter } from "react-simple-typewriter";
+import me from '../public/images/me.png'
+import shaq from '../public/images/shaqq.png'
+import dash from '../public/images/dash.png'
+import eganow from '../public/images/eganow.png'
+import bacchecker from '../public/images/bacchecker.png'
+import train from '../public/images/training.png'
+import escrow from '../public/images/escrow.png'
+import 'aos/dist/aos.css';
 
 function App() {
   const projects = [
@@ -29,11 +37,12 @@ function App() {
       ],
       github: "https://github.com/Dekin0Linux",
       live: "https://shaqapp.com",
+      image : shaq
     },
     {
       title: "Eganow website",
       description:
-        "Collaborative project management tool with real-time updates, team collaboration features, and progress tracking. Built with modern React patterns and responsive design.",
+        "A responsive, modern website built to showcase the features and services of Eganow, a Ghana-based fintech platform. It highlights key offerings like money transfers, bill payments, group contributions, and business solutions, with clear sections, intuitive layout, and engaging visuals to promote user trust and onboarding.",
       techStack: [
         "Next.js",
         "PostgreSQL",
@@ -42,28 +51,31 @@ function App() {
         "React Native",
       ],
       github: "https://github.com/Dekin0Linux",
-      live: "https://eganow-website-test.vercel.app/",
+      live: "https://eganow-website-test.vercel.app/gh",
+      image : eganow
     },
     {
-      title: "Weather Dashboard",
+      title: "E-commerce Dashboard",
       description:
-        "Interactive weather application with geolocation, 7-day forecasts, and beautiful data visualizations. Integrates multiple weather APIs for accurate predictions.",
-      techStack: ["React", "Chart.js", "OpenWeather API", "Tailwind CSS"],
+        "A modern and responsive admin dashboard for managing products, orders, customers, and sales analytics in an online store. It features intuitive navigation, real-time data visualization, product inventory control, order tracking, and user management—all designed to help store owners efficiently run their business.",
+      techStack: ["Next JS", "Chart.js", "Shadcn", "Tailwind CSS","Nodejs","Mongo DB"],
       github: "https://github.com/Dekin0Linux",
-      live: "#",
+      live: "https://shopadmin-murex.vercel.app",
+      image : dash
     },
     {
-      title: "Social Media Analytics",
+      title: "CryptoEdu",
       description:
-        "Comprehensive analytics dashboard for social media performance tracking. Features include engagement metrics, audience insights, and automated reporting.",
-      techStack: ["React", "Node.js", "PostgreSQL", "D3.js", "Express"],
+        "A clean and responsive landing page designed to showcase Veqta Square’s brand and services. Built with a modern layout and intuitive navigation to provide users with a smooth and engaging browsing experience.",
+      techStack: ["React", "TailwindCss"],
       github: "https://github.com/Dekin0Linux",
-      live: "#",
+      live: "https://veqtasquare.netlify.app/",
+      image : train
     },
     {
-      title: "Restaurant POS System",
+      title: "BacChecker",
       description:
-        "Point-of-sale system for restaurants with order management, inventory tracking, and sales analytics. Includes both web and mobile applications.",
+        "A versatile landing site designed to showcase BacChecker, a robust verification ecosystem for academic credentials, professional certifications, and identity documents. The site highlights tailored solutions for individuals, educational institutions, businesses, and government agencies.",
       techStack: [
         "React Native",
         "Node.js",
@@ -72,15 +84,17 @@ function App() {
         "Tailwind CSS",
       ],
       github: "https://github.com/Dekin0Linux",
-      live: "#",
+      live: "https://www.bacchecker.com/",
+      image : bacchecker
     },
     {
-      title: "Learning Management System",
+      title: "Escrow-GH",
       description:
-        "Educational platform with course creation, student progress tracking, and interactive learning modules. Features video streaming and assignment management.",
-      techStack: ["Next.js", "PostgreSQL", "Prisma", "AWS S3", "Tailwind CSS"],
+        "A clean and intuitive web app designed to safely manage peer-to-peer transactions in Ghana. EscrowGH empowers buyers and sellers with escrow services that hold funds in trust until both parties confirm delivery, ensuring secure and transparent exchanges.",
+      techStack: ["Next.js", "PostgreSQL", "Prisma", "Tailwind CSS"],
       github: "https://github.com/Dekin0Linux",
-      live: "#",
+      live: "https://escrowgh.netlify.app/",
+      image : escrow
     },
   ];
 
@@ -121,9 +135,9 @@ function App() {
     <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 ">
           <div className="flex justify-between items-center py-4">
-            <div className="text-2xl font-bold text-sky-600">Faisal</div>
+            <div className="text-2xl font-bold text-sky-600">Faisal Dev</div>
             <div className="hidden md:flex space-x-8">
               <a
                 href="#home"
@@ -157,60 +171,59 @@ function App() {
       {/* Hero Section  */}
       <section
         id="home"
-        className="pt-20 pb-16 size-auto rounded-full bg-radial-[at_50%_75%] from-sky-200 via-blue-400 to-indigo-900 to-90% "
+        className="pt-20 bg-blue-50 md:h-[80vh] grid- place-content-center  "
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
-          <div className="text-center py-20">
-            <div className="w-32 h-32 mx-auto mb-8 bg-gradient-to-r from-sky-400 to-sky-600 rounded-full flex items-center justify-center">
-              <span className="text-4xl font-bold text-white">F</span>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Hi, I'm <span className="text-sky-600">Faisal</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-4">
-              <Typewriter
-                words={["Full-Stack Developer & Designer"]}
-                loop={1}
-                cursor
-                cursorStyle="|"
-                typeSpeed={30}
-                deleteSpeed={50}
-                delaySpeed={1000}
-              />
-              
-            </p>
-            <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-8 leading-relaxed">
-              <Typewriter
-                words={["Passionate about creating exceptional digital experiences through clean code, innovative solutions and thoughtful design. I specialize in building scalable web and mobile applications that make a difference."]}
-                loop={1}
-                cursor
-                cursorStyle="|"
-                typeSpeed={70}
-                deleteSpeed={10}
-                delaySpeed={10000}
-              />
-              
-              {/* Passionate about creating exceptional digital experiences through
-              clean code innovative solutions and thoughtful design I
-              specialize in building scalable web and mobile applications that
-              make a difference. */}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#projects"
-                className="bg-sky-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-sky-700 transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-              >
-                View My Work
-              </a>
-              <a
-                href="#contact"
-                className="border-2 border-sky-600 text-sky-600 px-8 py-3 rounded-lg font-semibold hover:bg-sky-400 hover:text-white transition-all duration-200"
-              >
-                Get In Touch
-              </a>
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 grid-cols-1 ">
+
+          <div className="max-w-6xl mx-auto w-full  sm:px-6 p-2  ">
+            <div className="text-start py-20">
+              <h1 className="text-5xl md:text-start text-center md:text-6xl font-bold text-gray-900 mb-6">
+                Hi, I'm <span className="text-sky-600">Faisal</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-600 mb-4 w-full md:text-start text-center">
+                <Typewriter
+                  words={["Full-Stack Developer & Designer"]}
+                  loop={1}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={30}
+                  deleteSpeed={50}
+                  delaySpeed={500}
+                />
+                
+              </p>
+              <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-8 leading-relaxed md:text-start text-center">
+                <Typewriter
+                  words={["Passionate about creating exceptional digital experiences through clean code, innovative solutions and thoughtful design. I specialize in building scalable web and mobile applications that make a difference."]}
+                  loop={1}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={10}
+                  delaySpeed={10000}
+                />
+              </p>
+              <div className="flex  gap-4 md:justify-start justify-center ">
+                <a
+                  href="#projects"
+                  className="bg-sky-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-sky-700 transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                >
+                  View My Work
+                </a>
+                <a
+                  href="#contact"
+                  className="border-2 border-sky-600 text-sky-600 px-8 py-3 rounded-lg font-semibold hover:bg-sky-400 hover:text-white transition-all duration-200"
+                >
+                  Get In Touch
+                </a>
+              </div>
             </div>
           </div>
+          <div>
+            <img src={me} alt="" className="w-full"/>
+          </div>
         </div>
+
       </section>
 
       {/* About Section */}
@@ -225,8 +238,8 @@ function App() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="grid md:grid-cols-2 gap-12 items-center" >
+            <div data-aos="fade-right">
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">
                 My Journey
               </h3>
@@ -248,7 +261,7 @@ function App() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6" data-aos="fade-left">
               {skills.map((skill, index) => (
                 <div
                   key={index}
@@ -265,7 +278,7 @@ function App() {
           </div>
 
           {/* Tech Stack */}
-          <div className="mt-16">
+          <div className="mt-16" data-aos="fade-up">
             <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center">
               Technologies I Work With
             </h3>
@@ -300,7 +313,7 @@ function App() {
       {/* Projects Section */}
       <section id="projects" className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16" data-aos="fade-right">
+          <div className="text-center mb-16" data-aos="fade-up">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Featured Projects
             </h2>
@@ -310,20 +323,22 @@ function App() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <div
                 key={index}
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:-translate-y-2"
+                data-aos="zoom-in"
               >
-                <div className="h-48 bg-gradient-to-br from-sky-400 to-sky-600 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
+                <div className="md:h-80 bg-gradient-to-br from-gray-100 to-sky-50 relative overflow-hidden p-2">
+                  <div className="absolute inset-0  group-hover:bg-blue-200/30 transition-colors duration-300"></div>
+                  <img src={project.image} className="h-full w-auto md:object-cover rounded-md"/>
+                  {/* <div className="absolute inset-0 flex items-center justify-center">
                     <Code2 className="w-16 h-16 text-white/80" />
-                  </div>
+                  </div> */}
                 </div>
 
-                <div className="p-6">
+                <div className="p-6" >
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {project.title}
                   </h3>
@@ -372,10 +387,10 @@ function App() {
       <section id="contact" className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4" data-aos="fade-up">
               Let's Work Together
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto" data-aos="fade-up">
               I'm always interested in hearing about new opportunities and
               interesting projects. Let's connect and discuss how we can bring
               your ideas to life.
@@ -388,6 +403,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gray-50 p-6 rounded-xl text-center hover:bg-sky-50 hover:shadow-lg transition-all duration-300 group"
+              data-aos="flip-left"
             >
               <Github className="w-8 h-8 mx-auto mb-4 text-gray-600 group-hover:text-sky-600" />
               <h3 className="font-semibold text-gray-900 mb-2">GitHub</h3>
@@ -399,6 +415,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gray-50 p-6 rounded-xl text-center hover:bg-sky-50 hover:shadow-lg transition-all duration-300 group"
+              data-aos="flip-left"
             >
               <Linkedin className="w-8 h-8 mx-auto mb-4 text-gray-600 group-hover:text-sky-600" />
               <h3 className="font-semibold text-gray-900 mb-2">LinkedIn</h3>
@@ -408,6 +425,7 @@ function App() {
             <a
               href="mailto:phaisalsalif@gmail.com"
               className="bg-gray-50 p-6 rounded-xl text-center hover:bg-sky-50 hover:shadow-lg transition-all duration-300 group"
+              data-aos="flip-left"
             >
               <Mail className="w-8 h-8 mx-auto mb-4 text-gray-600 group-hover:text-sky-600" />
               <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
@@ -419,6 +437,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gray-50 p-6 rounded-xl text-center hover:bg-sky-50 hover:shadow-lg transition-all duration-300 group"
+              data-aos="flip-left"
             >
               <MessageCircle className="w-8 h-8 mx-auto mb-4 text-gray-600 group-hover:text-sky-600" />
               <h3 className="font-semibold text-gray-900 mb-2">WhatsApp</h3>
@@ -426,7 +445,7 @@ function App() {
             </a>
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-12" data-aos="fade-up">
             <p className="text-gray-600 mb-4">Prefer to reach out directly?</p>
             <a
               href="mailto:phaisalsalif@gmail.com"
