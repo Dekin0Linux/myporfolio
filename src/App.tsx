@@ -171,11 +171,11 @@ function App() {
       {/* Hero Section  */}
       <section
         id="home"
-        className="pt-20 bg-blue-50 md:h-[80vh] grid- place-content-center  "
+        className="pt-20 bg-gradient-to-r from-gray-200 to-gray-50 md:h-[80vh] grid place-content-center  "
       >
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 grid-cols-1 ">
 
-          <div className="max-w-6xl mx-auto w-full  sm:px-6 p-2  ">
+          <div className="max-w-14xl mx-auto w-full   p-2  ">
             <div className="text-start py-20">
               <h1 className="text-5xl md:text-start text-center md:text-6xl font-bold text-gray-900 mb-6">
                 Hi, I'm <span className="text-sky-600">Faisal</span>
@@ -220,7 +220,7 @@ function App() {
             </div>
           </div>
           <div>
-            <img src={me} alt="" className="w-full"/>
+            <img src={"https://enginetemplates.com/wp-content/uploads/edd/2019/06/et-journey-free-responsive-joomla-template.png"} alt="" className="w-full h-full object-cover"/>
           </div>
         </div>
 
